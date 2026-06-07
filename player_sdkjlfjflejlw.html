@@ -9,22 +9,39 @@
             font-family: sans-serif;
             background-color: #f0f2f5;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             padding: 20px;
         }
 
+        .content-wrapper {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .video-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .video-title:first-child {
+            margin-top: 0;
+        }
+
         /* レスポンシブに動画の比率（16:9）を保つためのコンテナ */
         .video-container {
             width: 100%;
-            max-width: 800px; /* パソコンで見たときの最大横幅 */
             position: relative;
             padding-top: 56.25%; /* 16:9 の比率を維持 */
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             border-radius: 8px;
             overflow: hidden;
+            margin-bottom: 20px;
         }
 
         /* プレイヤー自体のスタイル */
@@ -40,24 +57,36 @@
 </head>
 <body>
 
-    <div class="video-container">
-        <iframe 
-            src="https://www.youtube.com/embed/ooBEY7Zgt14"
-            title="YouTube video player" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-        </iframe>
-    </div>
+    <div class="content-wrapper">
+        <div class="video-title">ビデオ1</div>
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/pOlzhGSzpzc" 
+                title="YouTube video player 1" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
 
-    <hr>
-    
-     <div class="video-container">
-        <iframe 
-            src="https://www.youtube.com/embed/ooBEY7Zgt14"
-            title="YouTube video player" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-        </iframe>
+        <div class="video-title">ビデオ2</div>
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/ooBEY7Zgt14"
+                title="YouTube video player 2" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-title">ビデオ3</div>
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/ooBEY7Zgt14"
+                title="YouTube video player 3" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
 
 </body>
